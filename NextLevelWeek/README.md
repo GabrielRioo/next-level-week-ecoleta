@@ -1,6 +1,8 @@
 ### Next Level Week
 #### Anotações sobre a aula:
 
+![Imagem WebSite](ImagemEcoleta.png)
+
 #### Box Models
 * Modelo de Caixa, todas tem:
    * Largura
