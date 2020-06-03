@@ -40,6 +40,7 @@ Interessante usar: <br>
 * `transform: translateX(-50%)`
 ---
 ### Anotações sobre a aula 02:
+* [IBGE serviços API](https://servicodados.ibge.gov.br/api/docs)
 * `<form>`
 * `<fieldset>` -> `<legend>`
 * `<label for="nome">` - o for referencia ao name
@@ -52,3 +53,18 @@ Interessante usar: <br>
 * `.field*2`  = Cria 2 campos div com class field
 * `label+input` = Cria uma label e do lado um input
 * `form .field-group .field + .field` - Referencia ao segundo field
+
+#### JavaScript
+`document.write("Hello World")` - Escreve na tela <br>
+`var` / `let` / `const` <br>
+**Objeto:** - `const pessoa = { altura: "1,80m", idade: 24, solteiro: true, correr(){ return "run Forest" }}` <br>
+**Acessar um objeto** - `document.write(pessoa.altura)` <br>
+**Array** - `const colecao = ["blue", "green", 1]` = Coleção de dados<br>
+**Função** - `function saymyname () { document.write("Gabriel")}` = Atalho, reuso de codigo... <br>
+**Condicionais** - `if(boolean){ } else { }` <br>
+**Repetições/ loop** - `for(i = 0; i < 10; i++){document.write('${i}')}` <br>
+`console.log()`- Escreve no console do DevTools(f12) <br>
+**Função Anônima** - `() => {}` ou `function() { console.log() }` <br>
+`querySelector("input")` - Procura alguma coisa, exemplo, o primeiro input <br>
+`querySelectorAll("input")` - Procura TODOS input <br>
+
