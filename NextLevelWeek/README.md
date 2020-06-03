@@ -1,5 +1,5 @@
-### Next Level Week
-#### Anotações sobre a aula:
+# Next Level Week
+### Anotações sobre a aula 01:
 
 ![Imagem WebSite](ImagemEcoleta.png)
 
@@ -38,3 +38,17 @@ Interessante usar: <br>
 * `position: absolute;` 
 * `left:50%;`
 * `transform: translateX(-50%)`
+---
+### Anotações sobre a aula 02:
+* `<form>`
+* `<fieldset>` -> `<legend>`
+* `<label for="nome">` - o for referencia ao name
+* `<input type="text" name="nome">`
+   * `outline: none` - NO CSS, para tirar a linha em volta, ao selecionar o input
+* `<select name="" disabled>` - cria um dropdown desabilitado(não é possivel clicar)
+* `<option value="">` - opçoes do  dropdown
+
+#### EMET
+* `.field*2`  = Cria 2 campos div com class field
+* `label+input` = Cria uma label e do lado um input
+* `form .field-group .field + .field` - Referencia ao segundo field
