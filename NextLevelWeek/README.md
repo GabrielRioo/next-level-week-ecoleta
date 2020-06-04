@@ -48,11 +48,13 @@ Interessante usar: <br>
    * `outline: none` - NO CSS, para tirar a linha em volta, ao selecionar o input
 * `<select name="" disabled>` - cria um dropdown desabilitado(não é possivel clicar)
 * `<option value="">` - opçoes do  dropdown
+* Para criar uma referencia, tem q por ${} entre **CRASES**
 
 #### EMET
 * `.field*2`  = Cria 2 campos div com class field
 * `label+input` = Cria uma label e do lado um input
 * `form .field-group .field + .field` - Referencia ao segundo field
+* `li>img>span` - Cria um `span` dentro de um `img`, tudo dentro de um `li`
 
 #### JavaScript
 `document.write("Hello World")` - Escreve na tela <br>
@@ -67,4 +69,12 @@ Interessante usar: <br>
 **Função Anônima** - `() => {}` ou `function() { console.log() }` <br>
 `querySelector("input")` - Procura alguma coisa, exemplo, o primeiro input <br>
 `querySelectorAll("input")` - Procura TODOS input <br>
+**For Each** - `for(const state of states)` - para cada variavel estado de estado...
 
+### Anotações sobre a aula 03:
+**flex** - unidimencional, ou fica tudo um do lado do outro, ou tudo embaixo do outro. <br>
+**grid** - multidimencional, cria linhas e colunas
+* `display: grid`
+* `grid-template-columns: 1fr 1fr 1fr` - Cria tres colunas com 1fr
+   * `fr` = fração, ele mesmo calcula (_flexivel_)
+* `gap: 16px` - separa os grid em 16px
