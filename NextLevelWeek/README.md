@@ -2,6 +2,7 @@
 ### Anotações sobre a aula 01:
 
 ![Imagem WebSite](ImagemEcoleta.png)
+![Imagem Formulario](Furmulario.png)
 
 #### Box Models
 * Modelo de Caixa, todas tem:
@@ -78,3 +79,4 @@ Interessante usar: <br>
 * `grid-template-columns: 1fr 1fr 1fr` - Cria tres colunas com 1fr
    * `fr` = fração, ele mesmo calcula (_flexivel_)
 * `gap: 16px` - separa os grid em 16px
+* **Alpha no Hexadecimal:** - `#f5f5f5aa` - mais duas letras/numeros apos o hexadecimal
