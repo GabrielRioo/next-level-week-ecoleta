@@ -80,3 +80,11 @@ Interessante usar: <br>
    * `fr` = fração, ele mesmo calcula (_flexivel_)
 * `gap: 16px` - separa os grid em 16px
 * **Alpha no Hexadecimal:** - `#f5f5f5aa` - mais duas letras/numeros apos o hexadecimal
+
+### Anotações sobre a aula 04:
+* Baixando o **Node JS**
+* No Git Bash, digitar `node` para entrar no terminal do node
+* **Comandos:**
+   * `console.log()`
+   * `.exit`
+   * `npm install express` - para criar um servidor
