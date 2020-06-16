@@ -3,6 +3,7 @@
 
 ![Imagem WebSite](ImagemEcoleta.png)
 ![Imagem Formulario](Furmulario.png)
+![Imagem Search](Search.png)
 
 #### Box Models
 * Modelo de Caixa, todas tem:
@@ -88,3 +89,10 @@ Interessante usar: <br>
    * `console.log()`
    * `.exit`
    * `npm install express` - para criar um servidor
+   * **COMANDO PARA LIGAR O SERVIDOR:**
+      * `const express = require("express")`
+       `const server = xpress()`
+       `server.listen(3000)`
+   * `install nodemon -D` - Monitora para não ter que ficar reiniciando o servidor.
+   * `res.sendFile(__dirname + "/caminho")` - rota para carregar pagina
+   * `npm install nunjucks` - 
