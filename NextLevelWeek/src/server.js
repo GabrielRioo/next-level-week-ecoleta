@@ -24,9 +24,15 @@ server.get("/", (req, res) => {
         title: "Um Titulo" })
 })
 
-server.get("/create-point", (req, res) => {
+server.get("/create-point", (req, res) => {  
+
+    PAREI EM 1 HORA E 10 MINUTOS
+
     return res.render("create-point.html")
 })
+
+
+
 
 server.get("/search", (req, res) => {
     db.all(`SELECT * FROM places`, function (err, rows) {
@@ -36,7 +42,7 @@ server.get("/search", (req, res) => {
                 console.log("Aqui estão os registros: ")
                 console.log(rows)
 
-                const total = rows.length()
+                const total = rows.length
 
                 //mostrar a pagina html com os dados do banco de dados
                 return res.render("search-results.html", { places: rows, total })

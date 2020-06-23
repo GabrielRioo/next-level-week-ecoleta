@@ -7,7 +7,7 @@ const db = new sqlite3.Database("./src/database/database.db")
 
 module.exports = db
 // utilizar o objeto de banco de dados, para nossas operações
-// db.serialize(() => {
+db.serialize(() => {
 //     // Com comandos SQLite vou:
 //     // 1. Criar uma tabela
 //     db.run(`
@@ -50,20 +50,20 @@ module.exports = db
 //     // funçao de callback(err) caso der erro durante a execução
 //     db.run(query, values, afterInsertData)
     
-//     // 4. Deteleta os dados da tabela
-//     // db.run(`DELETE FROM places WHERE id = ?`, [3], function(err) {
-//     //     if (err) {
-//     //         return console.log(err)
-//     //     }
-//     //     console.log("Registro efetuado com sucesso!")
-//     // })
+    // 4. Deteleta os dados da tabela
+    db.run(`DELETE FROM places WHERE id = ?`, [4], function(err) {
+        if (err) {
+            return console.log(err)
+        }
+        console.log("Registro deletado com sucesso!")
+    })
 
-//     // 3. Consultar os dados da tabela
-//     db.all(`SELECT * FROM places`, function (err, rows) {
-//         if (err) {
-//             return console.log(err)
-//         }
-//         console.log("Aqui estão os registros: ")
-//         console.log(rows)
-//     })
-// })
+    // 3. Consultar os dados da tabela
+    db.all(`SELECT * FROM places`, function (err, rows) {
+        if (err) {
+            return console.log(err)
+        }
+        console.log("Aqui estão os registros: ")
+        console.log(rows)
+    })
+})
