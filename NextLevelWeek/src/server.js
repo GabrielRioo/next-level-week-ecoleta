@@ -2,6 +2,9 @@ const express = require("express") //para iniciar o servidor
 const { configure } = require("nunjucks")
 const server  = express()
 
+// Pegar o banco de dados
+const db = require("./database/db.js")
+
 //Configurar pasta publica
 server.use(express.static("public"))
 
@@ -26,7 +29,20 @@ server.get("/create-point", (req, res) => {
 })
 
 server.get("/search", (req, res) => {
-    return res.render("search-results.html")
+    db.all(`SELECT * FROM places`, function (err, rows) {
+                if (err) {
+                    return console.log(err)
+                }
+                console.log("Aqui estão os registros: ")
+                console.log(rows)
+
+                const total = rows.length()
+
+                //mostrar a pagina html com os dados do banco de dados
+                return res.render("search-results.html", { places: rows, total })
+            })
+
+    
 })
 
 //ligar o servidor
