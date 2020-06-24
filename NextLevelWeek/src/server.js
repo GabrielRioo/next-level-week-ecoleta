@@ -8,6 +8,9 @@ const db = require("./database/db.js")
 //Configurar pasta publica
 server.use(express.static("public"))
 
+// habilita o uso do req.body na aplicação
+server.use(express.urlencoded({extended: true}))
+
 // utilizando template engine.
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
@@ -24,11 +27,48 @@ server.get("/", (req, res) => {
         title: "Um Titulo" })
 })
 
-server.get("/create-point", (req, res) => {  
+server.get("/create-point", (req, res) => {   
 
-    PAREI EM 1 HORA E 10 MINUTOS
+// req query: Query String da nossa url (retorna as strings que esta na URL)
+console.log(req.query)
 
     return res.render("create-point.html")
+})
+
+server.post("/savepoint", (req, res) => {
+    // console.log(req.body)
+
+    // Inserir dados no banco de dados
+    const query = ` 
+        INSERT INTO places (image, name, adress, adress2, state, city, items) 
+        VALUES (?,?,?,?,?,?,?); 
+        `
+
+    const values = [
+        req.body.image,
+        req.body.name,
+        req.body.adress,
+        req.body.adress2,
+        req.body.state,
+        req.body.city,
+        req.body.items
+    ]
+
+    function afterInsertData(err) {
+        if (err) {
+            console.log(err)
+            return res.send("Erro no cadastro")
+        }
+        console.log("Cadastro realizado com sucesso!")
+        console.log(this) // retorna o run
+
+        return res.send("create-point.html", { saved: true })
+    }
+
+    // funçao de callback(err) caso der erro durante a execução
+    db.run(query, values, afterInsertData)
+
+   
 })
 
 
